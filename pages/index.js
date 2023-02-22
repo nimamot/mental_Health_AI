@@ -28,7 +28,7 @@ const Home = () => {
     setIsGenerating(false);
   }
   const onUserChangedText = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setUserInput(event.target.value);
   }
   return (
@@ -50,7 +50,7 @@ const Home = () => {
             value={userInput}
             onChange={onUserChangedText} />
           <div className="prompt-buttons">
-            <a className="generate-button" onClick={null}>
+            <a className="generate-button" onClick={callGenerateEndpoint}>
               <div className="generate">
                 <p>Generate</p>
               </div>
