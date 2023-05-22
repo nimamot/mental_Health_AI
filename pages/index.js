@@ -10,7 +10,6 @@ const Home = () => {
 
   const callGenerateEndpoint = async () => {
     setIsGenerating(true);
-
     console.log("Calling OpenAI...")
     const response = await fetch('/api/generate', {
       method: 'POST',
@@ -19,7 +18,6 @@ const Home = () => {
       },
       body: JSON.stringify({ userInput }),
     });
-
     const data = await response.json();
     const { output } = data;
     console.log("OpenAI replied...", output.text)
@@ -74,6 +72,5 @@ const Home = () => {
     </div>
   );
 };
-
 
 export default Home;
